@@ -1,0 +1,40 @@
+name: Feature request
+description: Предложить идею
+title: "[FEATURE] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо за идею. Опишите задачу, а не только решение — так проще найти
+        лучший вариант.
+  - type: dropdown
+    id: component
+    attributes:
+      label: Чего касается
+      options:
+        - Приложение Android
+        - Приложение Windows
+        - Личный кабинет (console.vumvpn.com)
+        - Telegram-бот
+        - Сайт
+        - Протоколы и серверы
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Какую задачу решаем
+      description: Что сейчас неудобно или невозможно.
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Как это могло бы работать
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Что пробовали вместо этого

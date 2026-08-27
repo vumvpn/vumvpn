@@ -1,0 +1,57 @@
+name: Bug report
+description: Что-то работает не так — расскажите, что именно
+title: "[BUG] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо, что нашли время на отчёт. Чем подробнее — тем быстрее починим.
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Где проявляется
+      options:
+        - Приложение Android
+        - Приложение Windows
+        - Личный кабинет (console.vumvpn.com)
+        - Telegram-бот
+        - Сайт
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Версия приложения или ОС
+      description: Например «Vum VPN 1.0.8, Android 14»
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Что произошло
+      description: Коротко и по делу — что пошло не так.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Как повторить
+      description: Пошагово: что нажать, чтобы увидеть то же самое.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Чего вы ожидали
+      description: Как, по-вашему, должно было быть.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Логи
+      description: >
+        Настройки → Диагностика → Логи → «Скопировать всё». Уберите оттуда ключи
+        и ссылки-подписки перед отправкой.
+      render: shell

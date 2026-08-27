@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Поддержка и вопросы по оплате
+    url: https://t.me/ghostcore_support
+    about: Ключи, тарифы, оплата, подключение — быстрее ответят в Telegram
+  - name: Чат сообщества
+    url: https://t.me/ghostcore_vpn_chat
+    about: Обсуждение, советы, помощь других пользователей
