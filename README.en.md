@@ -24,17 +24,30 @@ source code is in a private repository.
 
 ## Download
 
+The Vum VPN app itself currently ships for **Android** and **Windows**. On other
+platforms, connect with a third-party client — your Vum VPN key works there the
+same way.
+
 | Platform | What to install | Requirements |
 | --- | --- | --- |
-| 🤖 **Android** | [`vum-vpn.apk`](https://github.com/vumvpn/vumvpn/releases/latest) | Android 7.0+ |
-| 🪟 **Windows** | [`vum-vpn-setup.exe`](https://github.com/vumvpn/vumvpn/releases/latest) | Windows 10+ |
-| 🍎 **iOS** | [Happ](https://apps.apple.com/by/app/happ-proxy-utility/id6504287215) · [Incy](https://apps.apple.com/app/incy/id6756943388) (for the Russian App Store) | iOS 15+ |
-| 🖥 **macOS** | [Happ](https://apps.apple.com/by/app/happ-proxy-utility/id6504287215) · [Incy](https://apps.apple.com/app/incy/id6756943388) | macOS 12+ |
-| 🐧 **Linux** | [Happ](https://github.com/aspect-build/happ/releases/latest) | — |
-| 🌐 **Browser** | [console.vumvpn.com](https://console.vumvpn.com/) — installable as a PWA | any |
+| 🤖 **Android** — phones, tablets, Android TV | [`vum-vpn.apk`](https://github.com/vumvpn/vumvpn/releases/latest/download/vum-vpn.apk) — the Vum VPN app | Android 8.0+ |
+| 🪟 **Windows** | [`vum-vpn-setup.exe`](https://github.com/vumvpn/vumvpn/releases/latest/download/vum-vpn-setup.exe) — the Vum VPN app, [see the limitation below](#windows-limitation) · [Incy](https://github.com/INCY-DEV/incy-platforms/releases/latest) | Windows 10+, x64 |
+| 🍎 **iOS / iPadOS** | [Incy](https://apps.apple.com/app/incy/id6756943388) | — |
+| 🖥 **macOS** | [Incy](https://apps.apple.com/app/incy/id6756943388) | — |
+| 🐧 **Linux** | [Incy](https://github.com/INCY-DEV/incy-platforms/releases/latest) · [Happ](https://github.com/Happ-proxy/happ-desktop/releases/) | — |
+| 🧩 **Browser** | Extension for [Chrome](https://chromewebstore.google.com/detail/vum-vpn/iagclfgjjpjiilcjkofbcedlpcnlkmop) and [Firefox](https://addons.mozilla.org/firefox/addon/vum-vpn/) | — |
+
+<a id="windows-limitation"></a>
+> **Windows: a limitation of the current version.** The Windows app still runs on
+> the sing-box core, while our VLESS + Reality servers only accept a recent Xray.
+> So Hysteria2 servers connect in it, but Reality servers don't. Moving the
+> Windows app to Xray is in progress; until then, use Incy for all servers.
+
+There is no Vum VPN app for iOS, macOS or Linux yet. Incy is available in the
+Russian App Store too; Happ has been removed from it.
 
 Every file lives on the [Releases](https://github.com/vumvpn/vumvpn/releases/latest)
-page. A mirror that picks the build for your OS: [vumvpn.com/install](https://vumvpn.com/install).
+page. Pick a client for your OS at [vumvpn.com/install](https://vumvpn.com/install).
 
 ## Installation
 
@@ -49,6 +62,9 @@ page. A mirror that picks the build for your OS: [vumvpn.com/install](https://vu
 > Android will warn you — that's normal for apps installed outside Google Play.
 > Tap "Install anyway".
 
+On **Android TV** the APK installs the same way — via a file manager or the
+Downloader app. The app has a separate remote-friendly interface.
+
 </details>
 
 <details>
@@ -62,12 +78,17 @@ page. A mirror that picks the build for your OS: [vumvpn.com/install](https://vu
 > Administrator rights are required to create the VPN tunnel. SmartScreen may
 > show a warning — click "More info" → "Run anyway".
 
+While the Windows app is on sing-box, VLESS + Reality servers don't connect in it —
+[details](#windows-limitation). For those, install
+[Incy for Windows](https://github.com/INCY-DEV/incy-platforms/releases/latest)
+and import your key as in the Linux guide below.
+
 </details>
 
 <details>
 <summary><b>iOS and macOS</b></summary>
 
-1. Install **Happ** from the App Store (or **Incy** if your App Store region is Russia)
+1. Install [**Incy**](https://apps.apple.com/app/incy/id6756943388) from the App Store
 2. Sign in to the [console](https://console.vumvpn.com/) and copy your key
 3. Import the key into the app
 4. Connect the VPN
@@ -77,9 +98,10 @@ page. A mirror that picks the build for your OS: [vumvpn.com/install](https://vu
 <details>
 <summary><b>Linux</b></summary>
 
-1. Download and install **Happ**
+1. Download and install [**Incy**](https://github.com/INCY-DEV/incy-platforms/releases/latest)
+   (or [Happ](https://github.com/Happ-proxy/happ-desktop/releases/))
 2. Sign in to the [console](https://console.vumvpn.com/) and copy your key
-3. Import the key into Happ
+3. Import the key into the app
 4. Connect the VPN
 
 </details>
@@ -99,8 +121,11 @@ never have to re-import anything. One key works on several devices.
 
 **VLESS + Reality** disguises traffic as ordinary HTTPS — to an ISP or a DPI box
 it looks like a visit to a regular website. **Hysteria2** is UDP over QUIC and
-holds its speed even with noticeable packet loss. Powered by
-[sing-box](https://github.com/SagerNet/sing-box).
+holds its speed even with noticeable packet loss.
+
+The Android app runs on the [Xray](https://github.com/XTLS/Xray-core) core, which
+connects to all of our servers. The Windows app is still on
+[sing-box](https://github.com/SagerNet/sing-box) and is moving to Xray.
 
 ## Support
 
@@ -112,5 +137,5 @@ holds its speed even with noticeable packet loss. Powered by
 
 ## License
 
-The client is built on [sing-box](https://github.com/SagerNet/sing-box) and is
-distributed under the [GNU GPL v3.0](LICENSE).
+The client is built on [Xray-core](https://github.com/XTLS/Xray-core) (Android) and
+[sing-box](https://github.com/SagerNet/sing-box) (Windows) and is distributed under the [GNU GPL v3.0](LICENSE).
