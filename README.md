@@ -30,7 +30,7 @@
 
 | Платформа | Что ставим | Требования |
 | --- | --- | --- |
-| 🤖 **Android** — телефоны, планшеты, Android TV | [`vum-vpn.apk`](https://github.com/vumvpn/vumvpn/releases/latest/download/vum-vpn.apk) — приложение Vum VPN | Android 8.0+ |
+| 🤖 **Android** — телефоны, планшеты, Android TV, в том числе 32-битные приставки | [`vum-vpn.apk`](https://github.com/vumvpn/vumvpn/releases/latest/download/vum-vpn.apk) — приложение Vum VPN | Android 7.1+ |
 | 🪟 **Windows** | [`vum-vpn-setup.exe`](https://github.com/vumvpn/vumvpn/releases/latest/download/vum-vpn-setup.exe) — приложение Vum VPN, [см. ограничение ниже](#windows-limitation) · [Incy](https://github.com/INCY-DEV/incy-platforms/releases/latest) | Windows 10+, x64 |
 | 🍎 **iOS / iPadOS** | [Incy](https://apps.apple.com/app/incy/id6756943388) | — |
 | 🖥 **macOS** | [Incy](https://apps.apple.com/app/incy/id6756943388) | — |

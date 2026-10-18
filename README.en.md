@@ -30,7 +30,7 @@ same way.
 
 | Platform | What to install | Requirements |
 | --- | --- | --- |
-| 🤖 **Android** — phones, tablets, Android TV | [`vum-vpn.apk`](https://github.com/vumvpn/vumvpn/releases/latest/download/vum-vpn.apk) — the Vum VPN app | Android 8.0+ |
+| 🤖 **Android** — phones, tablets, Android TV, including 32-bit TV boxes | [`vum-vpn.apk`](https://github.com/vumvpn/vumvpn/releases/latest/download/vum-vpn.apk) — the Vum VPN app | Android 7.1+ |
 | 🪟 **Windows** | [`vum-vpn-setup.exe`](https://github.com/vumvpn/vumvpn/releases/latest/download/vum-vpn-setup.exe) — the Vum VPN app, [see the limitation below](#windows-limitation) · [Incy](https://github.com/INCY-DEV/incy-platforms/releases/latest) | Windows 10+, x64 |
 | 🍎 **iOS / iPadOS** | [Incy](https://apps.apple.com/app/incy/id6756943388) | — |
 | 🖥 **macOS** | [Incy](https://apps.apple.com/app/incy/id6756943388) | — |
