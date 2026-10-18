@@ -31,17 +31,11 @@
 | Платформа | Что ставим | Требования |
 | --- | --- | --- |
 | 🤖 **Android** — телефоны, планшеты, Android TV, в том числе 32-битные приставки | [`vum-vpn.apk`](https://github.com/vumvpn/vumvpn/releases/latest/download/vum-vpn.apk) — приложение Vum VPN | Android 7.1+ |
-| 🪟 **Windows** | [`vum-vpn-setup.exe`](https://github.com/vumvpn/vumvpn/releases/latest/download/vum-vpn-setup.exe) — приложение Vum VPN, [см. ограничение ниже](#windows-limitation) · [Incy](https://github.com/INCY-DEV/incy-platforms/releases/latest) | Windows 10+, x64 |
+| 🪟 **Windows** | [`vum-vpn-setup.exe`](https://github.com/vumvpn/vumvpn/releases/latest/download/vum-vpn-setup.exe) — приложение Vum VPN | Windows 10+, x64 |
 | 🍎 **iOS / iPadOS** | [Incy](https://apps.apple.com/app/incy/id6756943388) | — |
 | 🖥 **macOS** | [Incy](https://apps.apple.com/app/incy/id6756943388) | — |
 | 🐧 **Linux** | [Incy](https://github.com/INCY-DEV/incy-platforms/releases/latest) · [Happ](https://github.com/Happ-proxy/happ-desktop/releases/) | — |
 | 🧩 **Браузер** | Расширение для [Chrome](https://chromewebstore.google.com/detail/vum-vpn/iagclfgjjpjiilcjkofbcedlpcnlkmop) и [Firefox](https://addons.mozilla.org/firefox/addon/vum-vpn/) | — |
-
-<a id="windows-limitation"></a>
-> **Windows: ограничение текущей версии.** Приложение для Windows пока работает
-> на ядре sing-box, а наши серверы VLESS + Reality принимают только свежий Xray.
-> Поэтому в нём подключаются серверы Hysteria2, а Reality — нет. Перевод
-> Windows-версии на Xray в работе; до тех пор для всех серверов используйте Incy.
 
 Своего приложения для iOS, macOS и Linux пока нет. Incy ставится и из
 российского App Store; Happ оттуда удалён.
@@ -72,16 +66,14 @@ Downloader. У приложения есть отдельный интерфей
 
 1. Скачайте `vum-vpn-setup.exe` и запустите установщик
 2. Пройдите шаги установки
-3. Запустите Vum VPN **от имени администратора**
-4. Добавьте ключ и подключите VPN
+3. Запустите Vum VPN — Windows спросит права администратора
+4. Войдите в аккаунт или добавьте ключ и подключите VPN
 
 > Права администратора нужны, чтобы поднять VPN-туннель. SmartScreen может
 > показать предупреждение — «Подробнее» → «Выполнить в любом случае».
 
-Пока Windows-версия на sing-box, серверы VLESS + Reality в ней не подключаются —
-[подробнее](#windows-limitation). Для них поставьте
-[Incy для Windows](https://github.com/INCY-DEV/incy-platforms/releases/latest)
-и импортируйте ключ, как в инструкции для Linux ниже.
+Крестик окна сворачивает Vum VPN в трей — VPN продолжает работать. Выйти и
+отключить VPN — «Выход» в меню значка в трее.
 
 </details>
 
@@ -124,9 +116,8 @@ Downloader. У приложения есть отдельный интерфей
 DPI-систем это визит на обычный сайт. **Hysteria2** — UDP поверх QUIC, держит
 скорость даже при заметных потерях пакетов.
 
-Ядро приложения на Android — [Xray](https://github.com/XTLS/Xray-core): оно
-подключается ко всем нашим серверам. Windows-версия пока на
-[sing-box](https://github.com/SagerNet/sing-box) и переходит на Xray.
+Ядро приложения на Android и Windows — [Xray](https://github.com/XTLS/Xray-core):
+оно подключается ко всем нашим серверам.
 
 ## Поддержка
 
@@ -138,5 +129,4 @@ DPI-систем это визит на обычный сайт. **Hysteria2** �
 
 ## Лицензия
 
-Клиент построен на [Xray-core](https://github.com/XTLS/Xray-core) (Android) и
-[sing-box](https://github.com/SagerNet/sing-box) (Windows) и распространяется под [GNU GPL v3.0](LICENSE).
+Клиент построен на [Xray-core](https://github.com/XTLS/Xray-core) и распространяется под [GNU GPL v3.0](LICENSE).
